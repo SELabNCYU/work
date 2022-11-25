@@ -1,14 +1,10 @@
 #!/bin/bash
 set -e
 cat data/graph.txt
-echo --------------------
 git fetch
 git checkout test
-echo --------------------
 git log --graph --abbrev-commit --decorate --format=format:'%C(white)%s%C(reset) %C(dim white)' > ex_graph.txt
-echo --------------------
-git log --graph --abbrev-commit --decorate --format=format:'%C(white)%s%C(reset)'
-#cat ex_graph.txt
+cat ex_graph.txt
 
 if [ `diff ex_graph.txt data/graph.txt | wc -l` -ne 0 ]; then
 	echo "Your rebase or merge operation is incorrect!"
