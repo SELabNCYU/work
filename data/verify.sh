@@ -2,7 +2,7 @@
 set -e
 cat data/graph.txt
 echo --------------------
-git branch
+git checkout test
 echo --------------------
 git log --graph --abbrev-commit --decorate --format=format:'%C(white)%s%C(reset) %C(dim white)' > ex_graph.txt
 echo --------------------
