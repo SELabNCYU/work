@@ -6,7 +6,9 @@ git checkout $PROJECT_BRANCH
 #git log --graph --abbrev-commit --decorate --format=format:'%C(white)%s%C(reset) %C(dim white)' $PROJECT_BRANCH > ex_graph.txt
 #echo 123 $PROJECT_BRANCH
 #ls
-#cat ex_graph.txt
+git log> ex_graph.txt
+cat ex_graph.txt
+
 if [ `diff ex_graph.txt data/graph.txt | wc -l` -ne 0 ]; then
 	echo "Your rebase or merge operation is incorrect!"
 	exit 1
