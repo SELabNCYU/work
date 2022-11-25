@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
-
+PROJECT_BRANCH=test
 cat data/graph.txt
-git log --graph --abbrev-commit --decorate --format=format:'%C(white)%s%C(reset) %C(dim white)'  > ex_graph.txt
+git log --graph --abbrev-commit --decorate --format=format:'%C(white)%s%C(reset) %C(dim white)' $PROJECT_BRANCH > ex_graph.txt
 echo 123 $PROJECT_BRANCH
 ls
 cat ex_graph.txt
